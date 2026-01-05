@@ -113,17 +113,17 @@ function showProjects(projects) {
         <div class="desc">
           <p>${project.desc}</p>
           <div class="btns">
-            <a href="${project.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="${project.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+          <a href="${project.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
           </div>
-        </div>
-      </div>
-    </div>`;
-    });
-    projectsContainer.innerHTML = projectHTML;
-
-    VanillaTilt.init(document.querySelectorAll(".tilt"), { max: 15 });
-
+          </div>
+          </div>
+          </div>`;
+        });
+        projectsContainer.innerHTML = projectHTML;
+        
+        // <a href="${project.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
+        
+        VanillaTilt.init(document.querySelectorAll(".tilt"), { max: 15 });
     const srtop = ScrollReveal({
         origin: 'top',
         distance: '80px',
@@ -188,51 +188,51 @@ srtop.reveal('.contact .container .form-group', { delay: 400 });
    ======================================================= */
 
 // 1. Blokir klik kanan
-// document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('contextmenu', e => e.preventDefault());
 
 // 2. Blokir shortcut keyboard umum
-// document.onkeydown = function(e) {
-//     // F12
-//     if (e.keyCode == 123) return false;
+document.onkeydown = function(e) {
+    // F12
+    if (e.keyCode == 123) return false;
     
-//     // Ctrl + Shift + I / C / J / K
-//     if (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 67 || e.keyCode == 74 || e.keyCode == 75)) return false;
+    // Ctrl + Shift + I / C / J / K
+    if (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 67 || e.keyCode == 74 || e.keyCode == 75)) return false;
     
-//     // Ctrl + U (view source)
-//     if (e.ctrlKey && e.keyCode == 85) return false;
+    // Ctrl + U (view source)
+    if (e.ctrlKey && e.keyCode == 85) return false;
     
-//     // Ctrl + S (save page)
-//     if (e.ctrlKey && e.keyCode == 83) return false;
+    // Ctrl + S (save page)
+    if (e.ctrlKey && e.keyCode == 83) return false;
     
-//     // Ctrl + A (select all)
-//     if (e.ctrlKey && e.keyCode == 65) return false;
+    // Ctrl + A (select all)
+    if (e.ctrlKey && e.keyCode == 65) return false;
     
-//     return true;
-// };
+    return true;
+};
 
 // 3. Deteksi DevTools terbuka (metode toString + ukuran window)
-// (function() {
-//     let devtoolsOpen = false;
-//     const threshold = 160; // ukuran minimal saat DevTools terbuka
+(function() {
+    let devtoolsOpen = false;
+    const threshold = 160; // ukuran minimal saat DevTools terbuka
 
-//     setInterval(() => {
-//         if (window.outerHeight - window.innerHeight > threshold || 
-//             window.outerWidth - window.innerWidth > threshold) {
-//             devtoolsOpen = true;
-//         }
+    setInterval(() => {
+        if (window.outerHeight - window.innerHeight > threshold || 
+            window.outerWidth - window.innerWidth > threshold) {
+            devtoolsOpen = true;
+        }
 
-//         // Trik toString debugger
-//         const check = { toString: () => { devtoolsOpen = true; } };
-//         console.log('%c', check);
+        // Trik toString debugger
+        const check = { toString: () => { devtoolsOpen = true; } };
+        console.log('%c', check);
 
-//         if (devtoolsOpen) {
-//             // Ganti isi halaman dengan pesan (bisa diganti sesuai selera)
-//             document.body.innerHTML = `
-//                 <div style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:#111;color:#fff;display:flex;align-items:center;justify-content:center;flex-direction:column;font-family:sans-serif;text-align:center;padding:20px;">
-//                     <h1 style="font-size:3rem;">👀 Hey, Curious One!</h1>
-//                     <p style="font-size:1.5rem;max-width:600px;">Kode ini dilindungi. Kalau ingin lihat source code asli, cek langsung repo GitHub di tiap project ya 😊</p>
-//                     <p style="margin-top:30px;"><a href="https://github.com/namasahiddin" target="_blank" style="color:#0f0;text-decoration:underline;">github.com/namasahiddin</a></p>
-//                 </div>`;
-//         }
-//     }, 500);
-// })();
+        if (devtoolsOpen) {
+            // Ganti isi halaman dengan pesan (bisa diganti sesuai selera)
+            document.body.innerHTML = `
+                <div style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:#111;color:#fff;display:flex;align-items:center;justify-content:center;flex-direction:column;font-family:sans-serif;text-align:center;padding:20px;">
+                    <h1 style="font-size:3rem;">👀 Hey, Curious One!</h1>
+                    <p style="font-size:1.5rem;max-width:600px;">Kode ini dilindungi. Kalau ingin lihat source code asli, cek langsung repo GitHub di tiap project ya 😊</p>
+                    <p style="margin-top:30px;"><a href="https://github.com/namasahiddin" target="_blank" style="color:#0f0;text-decoration:underline;">github.com/namasahiddin</a></p>
+                </div>`;
+        }
+    }, 500);
+})();

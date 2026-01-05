@@ -1092,7 +1092,7 @@ form .button-area {
 .footer {
   min-height: auto;
   padding-top: 0;
-  background: rgb(0, 1, 43);
+  background: rgb(0, 0, 0);
 }
 .footer .box-container {
   display: flex;
@@ -1224,3 +1224,4 @@ form .button-area {
   top: calc(100% - 12rem);
 }
 /* scroll top ends */
+
