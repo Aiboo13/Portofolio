@@ -3,9 +3,8 @@
     "name": "hotel room booking app",
     "desc": "sebagai backend, mengunakan bahasa pemograman node.js, express.js dan databse postgreesql",
     "image": "ikuae",
-    "category": "android",
     "links": {
-      "view": "https://www.linkedin.com/posts/Minas-sable_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
+      "view": "",
       "code": "https://github.com/Aiboo13/ikuae/tree/main"
     }
   },
@@ -13,10 +12,18 @@
     "name": "web umkm",
     "desc": "sebagai frontend, mengunakan framework react.js, tailwindcss",
     "image": "branimulai",
-    "category": "android",
     "links": {
-      "view": "https://www.linkedin.com/posts/Minas-sable_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
-      "code": ""
+      "view": "",
+      "code": "https://github.com/Aiboo13/fronend_branimuali"
+    }
+  },
+  {
+    "name": "api social media",
+    "desc": "menngunakan laravel 11 sebagai backend api social media dengan data base MySql dan autentikasi ",
+    "image": "laravel",
+    "links": {
+      "view": "",
+      "code": "https://github.com/Aiboo13/BasicLaravel"
     }
   }
 ]
