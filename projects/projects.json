@@ -19,11 +19,21 @@
   },
   {
     "name": "api social media",
-    "desc": "menngunakan laravel 11 sebagai backend api social media dengan data base MySql dan autentikasi ",
+    "desc": "menngunakan laravel 11 sebagai backend api social media dengan data base MySql dan autentikasl. ",
     "image": "laravel",
     "links": {
       "view": "",
       "code": "https://github.com/Aiboo13/BasicLaravel"
     }
+  },
+  {
+    "name": "api E-commerce",
+    "desc": "RESTful API e-commerce yang dibangun menggunakan Laravel 11 sebagai backend, MySQL sebagai database, serta JWT untuk sistem autentikasi. API ini mendukung manajemen user, produk, keranjang (cart), dan pemesanan (orders) dengan sistem role antara seller dan customer.",
+    "image": "laravel2",
+    "links": {
+      "view": "",
+      "code": "https://github.com/Aiboo13/RestApiEcommerce"
+    }
   }
+  
 ]
