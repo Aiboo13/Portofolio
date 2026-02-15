@@ -28,8 +28,17 @@
   },
   {
     "name": "api E-commerce",
-    "desc": "RESTful API e-commerce yang dibangun menggunakan Laravel 11 sebagai backend, MySQL sebagai database, serta JWT untuk sistem autentikasi.",
+    "desc": "RESTful API e-commerce menggunakan Laravel 11 sebagai backend,MySQL sebagai database,JWT sistem autentikasi.",
     "image": "laravel2",
+    "links": {
+      "view": "",
+      "code": "https://github.com/Aiboo13/RestApiEcommerce"
+    }
+  },
+  {
+    "name": "api Ewallet",
+    "desc": "RESTful API e-Wallet menggunakan Laravel 12 sebagai backend,MySQL sebagai database,JWT sistem autentikasi.",
+    "image": "laravel3",
     "links": {
       "view": "",
       "code": "https://github.com/Aiboo13/RestApiEcommerce"
