@@ -188,7 +188,7 @@ srtop.reveal('.contact .container .form-group', { delay: 400 });
    ======================================================= */
 
 // 1. Blokir klik kanan
-document.addEventListener('contextmenu', e => e.preventDefault());
+// document.addEventListener('contextmenu', e => e.preventDefault());
 
 // 2. Blokir shortcut keyboard umum
 document.onkeydown = function(e) {
@@ -231,7 +231,7 @@ document.onkeydown = function(e) {
                 <div style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:#111;color:#fff;display:flex;align-items:center;justify-content:center;flex-direction:column;font-family:sans-serif;text-align:center;padding:20px;">
                     <h1 style="font-size:3rem;">👀 Hey, Curious One!</h1>
                     <p style="font-size:1.5rem;max-width:600px;">Kode ini dilindungi. Kalau ingin lihat source code asli, cek langsung repo GitHub di tiap project ya 😊</p>
-                    <p style="margin-top:30px;"><a href="https://github.com/namasahiddin" target="_blank" style="color:#0f0;text-decoration:underline;">github.com/namasahiddin</a></p>
+                    <p style="margin-top:30px;"><a href="https://github.com/Aiboo13/Portofolio" target="_blank" style="color:#0f0;text-decoration:underline;">github.com/namasahiddin</a></p>
                 </div>`;
         }
     }, 500);
