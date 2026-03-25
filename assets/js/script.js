@@ -211,28 +211,28 @@ document.onkeydown = function(e) {
 };
 
 // 3. Deteksi DevTools terbuka (metode toString + ukuran window)
-(function() {
-    let devtoolsOpen = false;
-    const threshold = 160; // ukuran minimal saat DevTools terbuka
+// (function() {
+//     let devtoolsOpen = false;
+//     const threshold = 160; // ukuran minimal saat DevTools terbuka
 
-    setInterval(() => {
-        if (window.outerHeight - window.innerHeight > threshold || 
-            window.outerWidth - window.innerWidth > threshold) {
-            devtoolsOpen = true;
-        }
+//     setInterval(() => {
+//         if (window.outerHeight - window.innerHeight > threshold || 
+//             window.outerWidth - window.innerWidth > threshold) {
+//             devtoolsOpen = true;
+//         }
 
-        // Trik toString debugger
-        const check = { toString: () => { devtoolsOpen = true; } };
-        console.log('%c', check);
+//         // Trik toString debugger
+//         const check = { toString: () => { devtoolsOpen = true; } };
+//         console.log('%c', check);
 
-        if (devtoolsOpen) {
-            // Ganti isi halaman dengan pesan (bisa diganti sesuai selera)
-            document.body.innerHTML = `
-                <div style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:#111;color:#fff;display:flex;align-items:center;justify-content:center;flex-direction:column;font-family:sans-serif;text-align:center;padding:20px;">
-                    <h1 style="font-size:3rem;">👀 Hey, Curious One!</h1>
-                    <p style="font-size:1.5rem;max-width:600px;">Kode ini dilindungi. Kalau ingin lihat source code asli, cek langsung repo GitHub di tiap project ya 😊</p>
-                    <p style="margin-top:30px;"><a href="https://github.com/Aiboo13/Portofolio" target="_blank" style="color:#0f0;text-decoration:underline;">github.com/namasahiddin</a></p>
-                </div>`;
-        }
-    }, 500);
-})();
+//         if (devtoolsOpen) {
+//             // Ganti isi halaman dengan pesan (bisa diganti sesuai selera)
+//             document.body.innerHTML = `
+//                 <div style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:#111;color:#fff;display:flex;align-items:center;justify-content:center;flex-direction:column;font-family:sans-serif;text-align:center;padding:20px;">
+//                     <h1 style="font-size:3rem;">👀 Hey, Curious One!</h1>
+//                     <p style="font-size:1.5rem;max-width:600px;">Kode ini dilindungi. Kalau ingin lihat source code asli, cek langsung repo GitHub di tiap project ya 😊</p>
+//                     <p style="margin-top:30px;"><a href="https://github.com/Aiboo13/Portofolio" target="_blank" style="color:#0f0;text-decoration:underline;">github.com/namasahiddin</a></p>
+//                 </div>`;
+//         }
+//     }, 500);
+// })();
