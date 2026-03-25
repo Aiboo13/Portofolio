@@ -191,24 +191,24 @@ srtop.reveal('.contact .container .form-group', { delay: 400 });
 // document.addEventListener('contextmenu', e => e.preventDefault());
 
 // 2. Blokir shortcut keyboard umum
-document.onkeydown = function(e) {
-    // F12
-    if (e.keyCode == 123) return false;
+// document.onkeydown = function(e) {
+//     // F12
+//     if (e.keyCode == 123) return false;
     
-    // Ctrl + Shift + I / C / J / K
-    if (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 67 || e.keyCode == 74 || e.keyCode == 75)) return false;
+//     // Ctrl + Shift + I / C / J / K
+//     if (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 67 || e.keyCode == 74 || e.keyCode == 75)) return false;
     
-    // Ctrl + U (view source)
-    if (e.ctrlKey && e.keyCode == 85) return false;
+//     // Ctrl + U (view source)
+//     if (e.ctrlKey && e.keyCode == 85) return false;
     
-    // Ctrl + S (save page)
-    if (e.ctrlKey && e.keyCode == 83) return false;
+//     // Ctrl + S (save page)
+//     if (e.ctrlKey && e.keyCode == 83) return false;
     
-    // Ctrl + A (select all)
-    if (e.ctrlKey && e.keyCode == 65) return false;
+//     // Ctrl + A (select all)
+//     if (e.ctrlKey && e.keyCode == 65) return false;
     
-    return true;
-};
+//     return true;
+// };
 
 // 3. Deteksi DevTools terbuka (metode toString + ukuran window)
 // (function() {
