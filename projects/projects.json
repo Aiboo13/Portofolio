@@ -19,7 +19,7 @@
   },
   {
     "name": "api social media",
-    "desc": "menngunakan laravel 11 sebagai backend api social media dengan data base MySql dan autentikasl. ",
+    "desc": "menngunakan laravel 11 sebagai backend api social media dengan data base MySql dan autentifikasl. ",
     "image": "laravel",
     "links": {
       "view": "",
