@@ -105,25 +105,24 @@ function showProjects(projects) {
     projects.slice(0, 10).forEach(project => {
         projectHTML += `
         <div class="box tilt">
-      <img draggable="false" src="/assets/images/projects/${project.image}.png" alt="project" />
-      <div class="content">
-        <div class="tag">
-        <h3>${project.name}</h3>
-        </div>
-        <div class="desc">
-          <p>${project.desc}</p>
-          <div class="btns">
-          <a href="${project.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+          <img draggable="false" src="/assets/images/projects/${project.image}.png" alt="project" />
+          <div class="content">
+            <div class="tag">
+              <h3>${project.name}</h3>
+            </div>
+            <div class="desc">
+              <p>${project.desc}</p>
+              <div class="btns">
+                <a href="${project.links.view}" class="btn" target="_blank">View</a>
+                <a href="${project.links.code}" class="btn" target="_blank">Code</a>
+              </div>
+            </div>
           </div>
-          </div>
-          </div>
-          </div>`;
-        });
-        projectsContainer.innerHTML = projectHTML;
-        
-        // <a href="${project.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-        
-        VanillaTilt.init(document.querySelectorAll(".tilt"), { max: 15 });
+        </div>`;
+    });
+    projectsContainer.innerHTML = projectHTML;
+
+    VanillaTilt.init(document.querySelectorAll(".tilt"), { max: 15 });
     const srtop = ScrollReveal({
         origin: 'top',
         distance: '80px',
@@ -133,8 +132,19 @@ function showProjects(projects) {
     srtop.reveal('.work .box', { interval: 200 });
 }
 
-fetchData().then(data => showSkills(data));
-fetchData("projects").then(data => showProjects(data));
+Promise.all([
+    fetchData().then(data => showSkills(data)),
+    fetchData("projects").then(data => showProjects(data))
+]).then(() => {
+    if (window.location.hash) {
+        const hashTarget = document.querySelector(window.location.hash);
+        if (hashTarget) {
+            setTimeout(() => {
+                hashTarget.scrollIntoView({ behavior: 'smooth' });
+            }, 150);
+        }
+    }
+});
 
 VanillaTilt.init(document.querySelectorAll(".tilt"), { max: 15 });
 
