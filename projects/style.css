@@ -106,6 +106,56 @@ header .navbar ul li a:hover{
 }
 /* navbar ends */
 
+/* nav-wrapper and theme toggle starts */
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: #f1f5f9;
+  color: #1e293b;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.08);
+  background: #e2e8f0;
+  color: #f59e0b;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.25);
+}
+
+.theme-toggle:active {
+  transform: scale(0.92);
+}
+
+.theme-toggle i {
+  font-size: 1.8rem;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.3s ease;
+}
+
+.theme-toggle:hover i {
+  transform: rotate(20deg) scale(1.1);
+}
+
+.theme-toggle.animating i {
+  transform: rotate(360deg) scale(0);
+}
+/* nav-wrapper and theme toggle ends */
+
 /* hamburger icon starts*/
 #menu{
   font-size: 3rem;
@@ -114,6 +164,16 @@ header .navbar ul li a:hover{
   display: none;
 }
 @media(max-width:768px){
+  .nav-wrapper {
+    gap: 1.5rem;
+  }
+  .theme-toggle {
+    width: 3.8rem;
+    height: 3.8rem;
+  }
+  .theme-toggle i {
+    font-size: 1.6rem;
+  }
   #menu{
       display: block;
   }
@@ -357,3 +417,165 @@ header .navbar ul li a:hover{
   top: calc(100% - 12rem);
 }
 /* scroll top ends */
+
+/* =======================================================
+   DARK MODE THEME (PROJECTS PAGE)
+   ======================================================= */
+html.dark-mode {
+  color-scheme: dark;
+}
+
+html.dark-mode,
+body.dark-mode {
+  background-color: #0b0f19;
+  color: #e2e8f0;
+}
+
+/* Scrollbar */
+html.dark-mode::-webkit-scrollbar-track,
+body.dark-mode::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+html.dark-mode::-webkit-scrollbar-thumb,
+body.dark-mode::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+/* Header & Navbar */
+body.dark-mode header {
+  background-color: rgba(11, 15, 25, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode header .logo {
+  color: #f8fafc;
+}
+body.dark-mode header .logo:hover {
+  color: #f59e0b;
+}
+
+body.dark-mode header .navbar ul li a {
+  color: #94a3b8;
+}
+body.dark-mode header .navbar ul li a:hover,
+body.dark-mode header .navbar ul li a.active {
+  color: #38bdf8;
+  border-bottom-color: #38bdf8;
+}
+
+/* Theme toggle in dark mode */
+body.dark-mode .theme-toggle {
+  background: #1e293b;
+  color: #facc15;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+body.dark-mode .theme-toggle:hover {
+  background: #334155;
+  color: #fef08a;
+  box-shadow: 0 0 16px rgba(250, 204, 21, 0.4);
+}
+
+/* Mobile menu in dark mode */
+body.dark-mode #menu {
+  color: #f8fafc;
+}
+@media (max-width: 768px) {
+  body.dark-mode header .navbar {
+    background-color: #0f172a;
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.7);
+  }
+  body.dark-mode header .navbar ul li a {
+    color: #e2e8f0;
+  }
+  body.dark-mode header .navbar ul li a.active,
+  body.dark-mode header .navbar ul li a:hover {
+    color: #38bdf8;
+    background-color: rgba(56, 189, 248, 0.12);
+    border-bottom: 0.5rem solid #38bdf8;
+  }
+}
+
+/* Work Section */
+body.dark-mode .work {
+  background: linear-gradient(180deg, #0f172a 0%, #07090e 100%);
+}
+body.dark-mode .work .heading {
+  color: #f8fafc;
+}
+body.dark-mode .work .heading span {
+  color: #facc15;
+}
+
+/* Filter buttons */
+body.dark-mode .work .button-group .btn {
+  background: #1e293b;
+  color: #e2e8f0;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+body.dark-mode .work .button-group .btn:hover {
+  background-color: #334155;
+  color: #38bdf8;
+  border-color: #38bdf8;
+}
+body.dark-mode .work .button-group .btn.is-checked {
+  background-color: #38bdf8;
+  color: #0b0f19;
+  border-color: #38bdf8;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+/* Project Boxes */
+body.dark-mode .work .box-container .box {
+  background: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+}
+body.dark-mode .work .box-container .box .content {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+}
+body.dark-mode .work .box-container .box .content .tag {
+  background: #f59e0b;
+}
+body.dark-mode .work .box-container .box .content .tag h3 {
+  color: #0b0f19;
+}
+body.dark-mode .work .desc p {
+  color: #cbd5e1;
+}
+body.dark-mode .work .desc .btns .btn {
+  background: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #f8fafc;
+}
+body.dark-mode .work .desc .btns .btn:hover {
+  background: #4f46e5;
+  border-color: #4f46e5;
+  color: #fff;
+}
+
+/* Back Button */
+body.dark-mode .backbtn .btn {
+  border: 2px solid #38bdf8;
+  color: #38bdf8;
+  background: transparent;
+  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.25);
+}
+body.dark-mode .backbtn .btn:hover {
+  background: #38bdf8;
+  color: #0b0f19;
+}
+
+/* Scroll Top Button */
+body.dark-mode #scroll-top {
+  background: #f59e0b;
+  color: #0b0f19;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+}
